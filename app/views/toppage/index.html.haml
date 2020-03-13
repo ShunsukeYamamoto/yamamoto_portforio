@@ -1,10 +1,105 @@
 .header
+  %p.top_scroll TOP
+  %p.about_scroll ABOUT
+  %p.works_scroll WORKS
+  %p.footer_scroll SKILLS
+
 
 .first_wrapper
-  =image_tag 
+  =image_tag "real-1816349_1280.jpg",class: "top_image"
+  .top_title
+    .firstname SHUNSUKE
+    .lastname YAMAMOTO
+    %p.enginner engineer
 
 .second_wrapper
+  = image_tag "IMG_2376.jpeg"
+  .about_wrapper
+    .about
+      %h1 about
+      %p 山本俊介 1995/1/13生
+      %p 東海大学短期大学部食物栄養学科　卒業
+      %p 新卒で精神科の栄養士として入社
+      %p 2年勤めた後、輸入車販売店に入社
+      %p 1年目はサービスフロントとして車両メンテナンス案内を担当
+      %p 2年目以降は営業として自動車販売を担当
+      %p 在籍時に月間販売台数６台、月間売り上げ１億円を達成
+      %p 2019年9月に退職し、
+      %p Youtubeをきっかけにエンジニアになることを志す
 
 .third_wrapper
+  .third_wrapper__title WORKS
+  .swiper-container.top-carousel
+    -# slide wrapper
+    .swiper-wrapper
+      -# slides
+      .swiper-slide
+        = link_to "http://18.178.182.146/users/sign_in", target: :_blank do
+          = image_tag 'スクリーンショット 2020-03-13 16.16.30.png', alt: 'swipe01'
+      .swiper-slide
+        = image_tag 'スクリーンショット 2020-03-13 16.18.27.png', alt: 'swipe02'
+    -# if need navigation button 
+    .swiper-button-prev
+    .swiper-button-next
+    -# if need pagination 
+    .swiper-pagination
+  .works_info
+    %p.title CAR LIFE APP
+    %p.content 自動車販売の経験を基に作成しました
+    %p.content 自動車販売店がエンドユーザーとのアフターサービスを進めるためのアプリです
+    %p.contemt 車検、点検のイベント作成、イベント毎のメッセージ機能、ユーザー作成機能等を実装しました
+    %p.content 管理者側 email: admin@admin psw: adminadmin
+    %p.content ユーザー側 email: user@user psw: useruser
+  .works_info.show
+    %p.title CARE KITCHEN
+    %p.content スクール同期のメンバーとの共同制作です
+    %p.content 栄養管理のできるレシピ投稿サイトというコンセプトで作成しています（未完成）
+    %p.contemt アカウント登録、アカウント内ユーザー登録、レシピ投稿機能、
+    %p.content データベースから食材を検索し分量に応じて栄養価を反映、レシピもしくは食べた物をユーザーに登録などの機能を実装しました
+    %p.content テストアカウント側 email: user@user psw: useruser
+
 
 .footer
+  %p.skill_title SKILLS
+  .skill_set
+    .skill
+      .skill_image
+        = image_tag "icons8-html-5-480.png"
+      %p HTML
+    .skill
+      .skill_image
+        = image_tag "icons8-css3-480.png"
+      %p CSS
+    .skill
+      .skill_image
+        = image_tag "haml.svg"
+      %p Haml
+    .skill
+      .skill_image
+        = image_tag "sass.svg"
+      %p Sass
+    .skill
+      .skill_image
+        = image_tag "icons8-rubyプログラミング言語-480.png"
+      %p Ruby
+    .skill
+      .skill_image
+        = image_tag "rails.svg"
+      %p Ruby on Rails
+    .skill
+      .skill_image
+        = image_tag "jquery.svg"
+      %p jQuery
+  .snss
+    .sns
+      = link_to "https://twitter.com/jyuCGMxHewOce59", target: :_blank,class: "sns_link" do
+        =image_tag "twitter.svg"
+    .sns
+      = link_to "https://qiita.com/shunsuke284052", target: :_blank,class: "sns_link" do
+        =image_tag "logo-effect.png"
+
+
+  = image_tag "laptop-3420934_1280.jpg",class: "bottom_image"
+
+
+= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"
