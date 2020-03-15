@@ -34,29 +34,39 @@ $(function(){
       clickable: true
     }
   });
+  
+  mySwiper.on('slideChangeTransitionEnd', function () {
+    $(works_infos).each(function(index,element){
+      if($(element).css('display') === 'block'){
+        $(this).css('display','none')
+      }else{
+        $(this).css('display','block')
+      }
+    })
+  });
 
   var works_infos = $(document).find('.works_info');
   $(works_infos[0]).css('display','block')
 
-  $('.swiper-button-prev').on('click',function(){
-    $(works_infos).each(function(index,element){
-      if($(element).css('display') === 'block'){
-        $(this).css('display','none')
-      }else{
-        $(this).css('display','block')
-      }
-    })
-  })
+  // $('.swiper-button-prev').on('click',function(){
+  //   $(works_infos).each(function(index,element){
+  //     if($(element).css('display') === 'block'){
+  //       $(this).css('display','none')
+  //     }else{
+  //       $(this).css('display','block')
+  //     }
+  //   })
+  // })
 
-  $('.swiper-button-next').on('click',function(){
-    $(works_infos).each(function(index,element){
-      if($(element).css('display') === 'block'){
-        $(this).css('display','none')
-      }else{
-        $(this).css('display','block')
-      }
-    })
-  })
+  // $('.swiper-button-next').on('click',function(){
+  //   $(works_infos).each(function(index,element){
+  //     if($(element).css('display') === 'block'){
+  //       $(this).css('display','none')
+  //     }else{
+  //       $(this).css('display','block')
+  //     }
+  //   })
+  // })
 
   
 })

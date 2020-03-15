@@ -71,10 +71,12 @@
   }
   .swiper-container.top-carousel{
     height: 50%;
-    img{
-      height: 100%;
-      display: block;
-      margin: 0 auto;
+    a{
+      img{
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
   .works_info{
